@@ -1,4 +1,4 @@
-#Запрос логинов курьеров со списком заказов в доставке
+#Запрос логинов курьеров со списком заказов в доставке 
 SELECT "Couriers".login, COUNT("Orders".*) AS SUM_ORDERS FROM "Couriers"
 LEFT OUTER JOIN "Orders" ON "Couriers".id = "Orders"."courierId"
 WHERE "Orders"."inDelivery" = TRUE OR "Orders"."inDelivery" IS NULL
